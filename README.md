@@ -9,6 +9,10 @@
 
 Run the following commands:
 
+```windows shell
+py -3.11 -m venv venv  
+```
+
 ```bash
 virtualenv -p /usr/bin/python3.11 venv
 ```
@@ -23,16 +27,9 @@ pip install -e .
 
 ```bash
 pip install -r requirements/required.txt
-```
-
-```bash
 pip install -r requirements/tests.txt
-```
-
-```bash
 pip install -r requirements/docs.txt
 ```
-
 
 To make and see the documentation:
 
