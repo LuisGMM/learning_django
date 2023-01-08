@@ -15,6 +15,13 @@ class Collection(models.Model):
 
     title = models.CharField(max_length=255)
 
+    def __str__(self) -> str:
+        return self.title
+
+
+    class Meta:
+        ordering = ['title']
+
 
 class Product(models.Model):
 
@@ -27,6 +34,13 @@ class Product(models.Model):
 
     collection = models.ForeignKey(Collection, on_delete=models.PROTECT)
     promotions = models.ManyToManyField(Promotion)
+
+    def __str__(self) -> str:
+        return self.title
+
+
+    class Meta:
+        ordering = ['title']
 
 
 class Customer(models.Model):
